@@ -1,5 +1,18 @@
+@font-face {
+  font-family: "Pokefont";
+  src: url("pokefont.ttf") format("truetype");
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
 body {
   box-sizing: border-box;
+  font-family: "Pokefont";
 }
 .container {
   margin: 2rem;
@@ -25,5 +38,57 @@ body {
   left: 5px;
   color: #3b6e9e;
   transform: rotate(-15deg);
-  font-weight: bold;
+}
+#modal {
+  /* display: none; */
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(74, 69, 69, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background-color: mistyrose;
+  /* width: 100%; */
+  max-width: 600px;
+  /* height: 800px; */
+  max-height: calc(100% - 100px);
+  padding: 2rem;
+  overflow: auto;
+}
+.modal-content__header {
+  display: grid;
+  grid-template-columns: 1fr 4rem;
+  grid-gap: 1rem;
+}
+.modal-content__header__name {
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+.modal-content__header__number {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-content__body {
+  display: grid;
+  grid-gap: 1rem;
+}
+.modal-content__body__sprite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content__body__sprite img {
+  width: 100%;
+  max-width: 300px;
+}
+.loading {
+  animation: rotate 1s infinite alternate;
 }
