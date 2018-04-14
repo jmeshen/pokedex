@@ -1,0 +1,29 @@
+body {
+  box-sizing: border-box;
+}
+.container {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+}
+.item:hover {
+  background-color: #fdc507;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.item::before {
+  content: "#" attr(data-num);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #3b6e9e;
+  transform: rotate(-15deg);
+  font-weight: bold;
+}
