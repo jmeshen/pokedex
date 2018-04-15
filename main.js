@@ -1,4 +1,5 @@
 const POKEAPI = 'https://pokeapi.co/api/v2/pokemon';
+const MAX_PKMN = 802;
 
 function fetchPkmn(num) {
   const req = new Request(`${POKEAPI}/${num}`);
@@ -47,7 +48,7 @@ window.onload = () => {
           contentType.innerText = typesStr;
           contentHeight.innerText = `HEIGHT ${data.height}`;
           contentWeight.innerText = `WEIGHT ${data.weight}`;
-          if (num < 721) {
+          if (num < MAX_PKMN) {
             modalNext.classList.remove('hidden');
           }
           if (num > 1) {
@@ -133,7 +134,7 @@ window.onload = () => {
     if (event.keyCode === 39) {
       if (contentNum.innerText) {
         num = +contentNum.innerText.slice(1);
-        if (num < 721) {
+        if (num < MAX_PKMN) {
           clearContentShowSearch();
           num++;
           updatePkmn();
