@@ -31,8 +31,8 @@ window.onload = () => {
         if (!res.ok) {
           searchingSprite.classList.add('hide');
           searchingError.classList.remove('hide');
-          modalNext.classList.add('hide');
-          modalPrev.classList.add('hide');
+          modalNext.classList.add('hidden');
+          modalPrev.classList.add('hidden');
           throw Error(res.statusText);
         }
         res.json().then((data) => {
@@ -48,10 +48,10 @@ window.onload = () => {
           contentHeight.innerText = `HEIGHT ${data.height}`;
           contentWeight.innerText = `WEIGHT ${data.weight}`;
           if (num < 721) {
-            modalNext.classList.remove('hide');
+            modalNext.classList.remove('hidden');
           }
           if (num > 1) {
-            modalPrev.classList.remove('hide');
+            modalPrev.classList.remove('hidden');
           }
           searching.classList.add('hide');
           content.classList.remove('hide');
@@ -66,8 +66,8 @@ window.onload = () => {
     contentNum.innerText = '';
     contentHeight.innerText = '';
     contentWeight.innerText = '';
-    modalNext.classList.add('hide');
-    modalPrev.classList.add('hide');
+    modalNext.classList.add('hidden');
+    modalPrev.classList.add('hidden');
     searching.classList.remove('hide');
     content.classList.add('hide');
   }
@@ -81,8 +81,8 @@ window.onload = () => {
     contentType.innerText = '';
     contentHeight.innerText = '';
     contentWeight.innerText = '';
-    modalNext.classList.add('hide');
-    modalPrev.classList.add('hide');
+    modalNext.classList.add('hidden');
+    modalPrev.classList.add('hidden');
   }
 
   document.querySelector('body').addEventListener('click', (event) => {
@@ -98,8 +98,8 @@ window.onload = () => {
         contentNum.innerText = '';
         contentHeight.innerText = '';
         contentWeight.innerText = '';
-        modalNext.classList.add('hide');
-        modalPrev.classList.add('hide');
+        modalNext.classList.add('hidden');
+        modalPrev.classList.add('hidden');
         searching.classList.remove('hide');
         content.classList.add('hide');
         if (event.target === modalPrev) {
@@ -117,7 +117,6 @@ window.onload = () => {
     }
   });
   document.querySelector('body').addEventListener('keyup', (event) => {
-    console.log(event);
     if (event.keyCode === 27) {
       closeModal();
     }

@@ -10,6 +10,9 @@
     transform: rotate(20deg);
   }
 }
+html {
+  font-size: 16px;
+}
 body {
   box-sizing: border-box;
   font-family: "Pokefont", "Courier", monospace;
@@ -58,6 +61,8 @@ body {
 .modal-next {
   font-size: 3rem;
   cursor: pointer;
+  padding: 1rem;
+  font-weight: bold;
 }
 .modal-close {
   position: absolute;
@@ -137,4 +142,16 @@ body {
 }
 .hide {
   display: none !important;
+}
+.hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 11px;
+  }
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
 }
