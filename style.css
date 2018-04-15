@@ -59,6 +59,23 @@ body {
   font-size: 3rem;
   cursor: pointer;
 }
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f9f6f6;
+  width: 1.2rem;
+  height: 1.2rem;
+  /* color: white; */
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 2px;
+  cursor: pointer;
+}
 .modal-content {
   border: 4px solid black;
   border-radius: 3px;
@@ -70,6 +87,7 @@ body {
   max-height: calc(100% - 100px);
   padding: 2rem;
   overflow: auto;
+  position: relative;
 }
 .modal-content__header {
   display: grid;

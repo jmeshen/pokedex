@@ -13,6 +13,7 @@ window.onload = () => {
   const searchingError = document.querySelector('.modal-searching__body__error',);
   const modalNext = document.querySelector('.modal-next');
   const modalPrev = document.querySelector('.modal-prev');
+  const modalClose = document.querySelector('.modal-close');
   const contentName = document.querySelector('.modal-content__header__name');
   const contentNum = document.querySelector('.modal-content__header__number');
   const contentSprite = document.querySelector('.modal-content__body__sprite__img',);
@@ -111,7 +112,7 @@ window.onload = () => {
     if (num) {
       updatePkmn();
     }
-    if (event.target === modal) {
+    if (event.target === modal || event.target === modalClose) {
       closeModal();
     }
   });
