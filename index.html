@@ -2185,8 +2185,9 @@
       <img src="./img/721.png" alt="">
     </div>
   </div>
-  <div id="modal">
-    <div class="modal-content">
+  <div id="modal" class="hide">
+    <div class="modal-prev hide">&lt;</div>
+    <div class="modal-content hide">
       <div class="modal-content__header">
         <div class="modal-content__header__name">
         </div>
@@ -2206,9 +2207,19 @@
         </div>
       </div>
     </div>
+    <div class="modal-content modal-searching hide">
+      <div class="modal-searching__body">
+        <div class="modal-searching__body__sprite">
+          <img class="modal-searching__body__sprite__img loading" src="./img/pokeball.png" alt=""> searching ..
+        </div>
+        <div class="modal-searching__body__error hide">
+          <img class="modal-searching__body__sprite__img" src="./img/pokeball.png" alt=""> try again ?
+        </div>
+      </div>
 
-  </div>
-  <script src="./main.js"></script>
+    </div>
+    <div class="modal-next hide">&gt;</div>
+    <script src="./main.js"></script>
 </body>
 
 </html>
