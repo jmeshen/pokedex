@@ -2,7 +2,7 @@ const POKEAPI = 'https://pokeapi.co/api/v2/pokemon';
 const MAX_PKMN = 802;
 
 function fetchPkmn(num) {
-  const req = new Request(`${POKEAPI}/${num}`);
+  const req = new Request(`${POKEAPI}/${num}/`);
   return fetch(req);
 }
 
